@@ -1,27 +1,30 @@
 /* Custom styles for math formulas */
 
 /* Adjust spacing for inline math */
-.katex {
+.math-inline {
   font-size: 1.1em;
-  line-height: 1.5;
 }
 
 /* Adjust display math (block equations) */
-.katex-display {
+.math-block {
   padding: 1rem 0;
   overflow-x: auto;
   overflow-y: hidden;
+  text-align: center;
 }
 
 /* Make sure overflow is handled properly */
-.katex-display > .katex {
+.math-block > mjx-container {
   max-width: 100%;
-  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 /* Fix for mobile view */
 @media (max-width: 767px) {
-  .katex-display {
+  .math-block {
     font-size: 0.85em;
   }
 } 
