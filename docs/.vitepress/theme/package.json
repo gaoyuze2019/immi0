@@ -1,0 +1,7 @@
+{
+  "name": "immi0-blog-theme",
+  "private": true,
+  "dependencies": {
+    "markdown-it-mathjax3": "^4.3.2"
+  }
+} 

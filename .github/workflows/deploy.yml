@@ -33,7 +33,15 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install markdown-it-mathjax3 --save-dev
+          npm list markdown-it-mathjax3
+      
+      - name: Check config
+        run: |
+          echo "VitePress config file content:"
+          cat docs/.vitepress/config.mjs
       
       - name: Build
         run: npm run build

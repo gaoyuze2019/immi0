@@ -1,6 +1,9 @@
 // docs/.vitepress/config.js
 import { defineConfig } from 'vitepress'
 
+// Explicitly require markdown-it-mathjax3
+import mathjax3 from 'markdown-it-mathjax3'
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'immi0 博客',
@@ -11,7 +14,10 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#3c8772' }]
   ],
   markdown: {
-    math: true
+    math: true,
+    config: (md) => {
+      md.use(mathjax3);
+    }
   },
   themeConfig: {
     nav: [
