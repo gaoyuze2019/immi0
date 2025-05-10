@@ -1,0 +1,27 @@
+/* Custom styles for math formulas */
+
+/* Adjust spacing for inline math */
+.katex {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Adjust display math (block equations) */
+.katex-display {
+  padding: 1rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Make sure overflow is handled properly */
+.katex-display > .katex {
+  max-width: 100%;
+  display: block;
+}
+
+/* Fix for mobile view */
+@media (max-width: 767px) {
+  .katex-display {
+    font-size: 0.85em;
+  }
+} 

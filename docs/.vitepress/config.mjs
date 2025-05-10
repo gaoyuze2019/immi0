@@ -8,8 +8,12 @@ export default defineConfig({
   base: '/', // Base URL for deployment
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css' }],
     ['meta', { name: 'theme-color', content: '#3c8772' }]
   ],
+  markdown: {
+    math: true
+  },
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
