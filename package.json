@@ -1,34 +1,15 @@
-import { defineConfig } from 'vitepress'
-import katex from 'markdown-it-katex'
-
-export default defineConfig({
-  lang: 'zh-CN',
-  title: 'immi0\'s blog',
-  description: '记录技术与人生成长',
-  markdown: {
-    config: (md) => {
-      md.use(katex)
-    }
+{
+  "name": "immi0-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress preview docs"
   },
-  head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css' }]
-  ],
-  themeConfig: {
-    nav: [
-      { text: '主页', link: '/' },
-      { text: '技术', link: '/tech/' },
-      { text: '关于', link: '/about/' }
-    ],
-    sidebar: {
-      '/tech/': [
-        {
-          text: '技术文章',
-          items: [
-            { text: '前端', link: '/tech/frontend' },
-            { text: '后端', link: '/tech/backend' }
-          ]
-        }
-      ]
-    }
+  "dependencies": {},
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "markdown-it-katex": "^2.0.3",
+    "katex": "^0.16.22"
   }
-})
+}
