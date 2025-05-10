@@ -11,7 +11,13 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "markdown-it-mathjax3": "^4.3.2"
+  },
   "devDependencies": {
+    "@mdit/plugin-katex": "^0.18.0",
+    "katex": "^0.16.22",
+    "markdown-it-katex": "^2.0.3",
     "vitepress": "^1.6.3"
   }
 }

@@ -32,19 +32,27 @@ jobs:
           node-version: 18
           cache: 'npm'
       
+      - name: Debug NPM version
+        run: npm --version
+      
       - name: Install dependencies
         run: |
           npm install
-          npm install markdown-it-mathjax3 --save-dev
-          npm list markdown-it-mathjax3
+          npm install markdown-it-mathjax3 --save
+          npm ls markdown-it-mathjax3 || true
       
-      - name: Check config
+      - name: Check package.json
+        run: cat package.json
+      
+      - name: Debug node_modules
         run: |
-          echo "VitePress config file content:"
-          cat docs/.vitepress/config.mjs
+          ls -la node_modules/markdown-it-mathjax3 || true
+          find node_modules -name "markdown-it-mathjax3" || true
       
       - name: Build
-        run: npm run build
+        run: |
+          NODE_ENV=production npm run build
+          ls -la docs/.vitepress/dist || true
       
       - name: Setup Pages
         uses: actions/configure-pages@v3
