@@ -30,7 +30,7 @@ export default defineConfig({
           items: [
             { text: '数据结构与算法介绍', link: '/posts/l1-intro-data-structures-algo' },
             { text: '网易严选&大百多分析-来自Chatgpt', link: '/posts/netease-vs-dabaibai-analysis' },
-            { text: '品牌选择指南', link: '/posts/brand-selection-guide' }
+            { text: '品牌选择', link: '/posts/brand-selection' }
           ]
         }
       ]
