@@ -762,11 +762,11 @@ Q:加拿大这个品牌叫mrpanda.ca，合适吗？ 因为这个域名是可以�
 
 > 如果你想省去解释成本、对动物元素也非刚需，就选 **GeekGear / GigaGoose** 这类音节更分明的备选。需要我帮你再跑一遍商标可用性或出几张 Logo 草图，随时说！
 
-![imagegeekgoose_logo](/Users/benjamingao/Downloads/imagegeekgoose_logo.png)
+<!-- GeekGoose Logo 图片已移除 -->
 
 ## **四、computepanda.com，计算熊猫**
 
-![image-20250523204320469](/Users/benjamingao/Library/Application Support/typora-user-images/image-20250523204320469.png)
+<!-- computepanda.com 域名注册截图已移除 -->
 
 你说得完全对！从你截图来看，**computepanda.com** 目前确实是可以注册的，而且价格才 **83元人民币/年**，非常划算。
 
