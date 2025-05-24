@@ -2,11 +2,11 @@
 
 ## 📋 目录
 
-- [一、熊猫先生Ca，www.mrpanda.ca](#一熊猫先生ca-wwwmrpandaca)
-- [二、www.imm3.com](#二-wwwimm3com)
-- [三、geekgoose.com 怎么样？&商标查询](#三geekgoosecom-怎么样商标查询)
-- [四、computepanda.com，计算熊猫](#四computepandacom计算熊猫)
-- [五、四个品牌PK一下](#五四个品牌pk一下)
+- [一、熊猫先生Ca，www.mrpanda.ca](#一、熊猫先生ca-www-mrpanda-ca)
+- [二、www.imm3.com](#二、www-imm3-com)
+- [三、geekgoose.com 怎么样？&商标查询](#三、geekgoose-com-怎么样-商标查询)
+- [四、computepanda.com，计算熊猫](#四、computepanda-com-计算熊猫)
+- [五、四个品牌PK一下](#五、四个品牌pk一下)
 
 ---
 
@@ -1264,9 +1264,7 @@ ChatGPT的答案：
 
 
 
-# **✅** 
-
-# **选用主品牌：ComputePanda.com**
+## ✅ 选用主品牌：ComputePanda.com
 
 
 
