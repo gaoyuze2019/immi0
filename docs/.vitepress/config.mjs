@@ -14,6 +14,10 @@ export default defineConfig({
     math: true
   },
   themeConfig: {
+    outline: {
+      level: [1, 1], // 只显示H1标题在目录中
+      label: 'On this page'
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/posts/' },
