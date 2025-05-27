@@ -43,7 +43,8 @@ export default defineConfig({
           text: '商业分析',
           items: [
             { text: '澳洲Henry：9种被动收入方式深度分析', link: '/business/henry-passive-income-analysis' },
-            { text: '电商之路：从咨询到放弃——高竞争、高成本、特费劲、高失败率', link: '/business/ecommerce-journey-analysis' }
+            { text: '电商之路：从咨询到放弃——高竞争、高成本、特费劲、高失败率', link: '/business/ecommerce-journey-analysis' },
+            { text: '澳洲Henry vs 刘润商业模式深度对比分析', link: '/business/henry-vs-liurun-business-analysis' }
           ]
         }
       ]
