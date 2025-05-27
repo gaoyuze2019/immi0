@@ -181,7 +181,7 @@ Henry对粉丝的反馈有着zero tolerance policy（零容忍态度），他认
 
 ## 💼 第二部分：ChatGPT 深度研究的答案
 
-# **澳洲Henry商业模式与盈利结构深度分析**
+### **澳洲Henry商业模式与盈利结构深度分析**
 
 ## 📊 Henry的主要产品与收入渠道
 

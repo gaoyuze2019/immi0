@@ -16,10 +16,7 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/logo.png',
-    outline: {
-      level: [1, 1], // 只显示H1标题在目录中
-      label: 'On this page'
-    },
+    outline: 'deep',
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/posts/' },
