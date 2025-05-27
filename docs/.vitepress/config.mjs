@@ -7,13 +7,15 @@ export default defineConfig({
   description: '记录技术与人生成长',
   base: '/', // Base URL for deployment
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'theme-color', content: '#3c8772' }]
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['meta', { name: 'theme-color', content: '#0D9488' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }]
   ],
   markdown: {
     math: true
   },
   themeConfig: {
+    logo: '/logo.png',
     outline: {
       level: [1, 1], // 只显示H1标题在目录中
       label: 'On this page'
