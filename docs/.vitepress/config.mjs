@@ -23,6 +23,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/posts/' },
+      { text: '商业分析', link: '/business/' },
       { text: '工具', link: '/tools' },
       { text: '关于', link: '/about' }
     ],
@@ -34,6 +35,14 @@ export default defineConfig({
             { text: '数据结构与算法介绍', link: '/posts/l1-intro-data-structures-algo' },
             { text: '网易严选&大百多分析-来自Chatgpt', link: '/posts/netease-vs-dabaibai-analysis' },
             { text: '品牌选择', link: '/posts/brand-selection' }
+          ]
+        }
+      ],
+      '/business/': [
+        {
+          text: '商业分析',
+          items: [
+            { text: '澳洲Henry：9种被动收入方式深度分析', link: '/business/henry-passive-income-analysis' }
           ]
         }
       ]
