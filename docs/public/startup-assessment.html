@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温哥华电商及创业方向评估</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F5F5F4; color: #374151; }
+        .nav-button { transition: all 0.3s ease; }
+        .nav-button.active { background-color: #0D9488; color: white; }
+        .nav-button:hover { background-color: #0F766E; color: white; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+        .card { background-color: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        .tab-button { background-color: #E0F2F7; color: #0D9488; }
+        .tab-button.active { background-color: #0D9488; color: white; }
+        h1, h2, h3 { color: #1F2937; }
+        .accent-text { color: #0D9488; }
+        .badge { display: inline-block; padding: 0.25em 0.6em; font-size: 0.75em; font-weight: 700; line-height: 1; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.375rem; }
+        .badge-red { background-color: #FEE2E2; color: #DC2626; }
+        .badge-yellow { background-color: #FEF3C7; color: #D97706; }
+        .badge-green { background-color: #D1FAE5; color: #059669; }
+        .details-content { display: none; margin-top: 0.5rem; padding: 0.5rem; background-color: #F9FAFB; border-radius: 0.25rem;}
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-slate-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold">创业方向评估与建议</h1>
+                </div>
+                <nav class="hidden md:flex space-x-2 lg:space-x-4">
+                    <button data-target="ecommerce-assessment" class="nav-button active px-3 py-2 rounded-md text-sm font-medium">电商创业评估</button>
+                    <button data-target="new-ventures" class="nav-button px-3 py-2 rounded-md text-sm font-medium">新赛道探索</button>
+                    <button data-target="recommendation" class="nav-button px-3 py-2 rounded-md text-sm font-medium">综合建议</button>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-700">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button data-target="ecommerce-assessment" class="nav-button active block w-full text-left px-3 py-2 rounded-md text-base font-medium">电商创业评估</button>
+                <button data-target="new-ventures" class="nav-button block w-full text-left px-3 py-2 rounded-md text-base font-medium">新赛道探索</button>
+                <button data-target="recommendation" class="nav-button block w-full text-left px-3 py-2 rounded-md text-base font-medium">综合建议</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <section id="ecommerce-assessment" class="content-section active">
+            <div class="bg-sky-50 p-6 rounded-lg shadow mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-sky-700">电商创业评估：温哥华电脑配件销售</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    本部分将深入分析您提出的在温哥华销售DIY电脑及配件的电商项目。我们将从项目概况、可行性、潜在风险、成功率及价值创造等多个维度进行评估，并结合您提供的个人情况（如经验、资金、供应链等），希望能为您提供清晰的参考。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">项目概述</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>核心业务:</strong> 前期主营DIY电脑组装及相关配件。</li>
+                        <li><strong>目标市场:</strong> 温哥华本地人 → 加拿大 → 整个北美市场。</li>
+                        <li><strong>销售渠道:</strong> 独立电商网站（Shopify等平台待考虑）。</li>
+                        <li><strong>启动资金:</strong> 约100万人民币（含进货成本）。</li>
+                        <li><strong>团队人力:</strong> 初期1-2人 (您和您兄弟 - 待确认)。</li>
+                        <li><strong>供应链:</strong> 精粤（价格竞争力一般）。</li>
+                        <li><strong>经验背景:</strong> 缺乏网站运营及电商经验。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">主要挑战与风险因素</h3>
+                    <div class="chart-container">
+                        <canvas id="riskRadarChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2 text-center">风险因素雷达图 (数值越高风险越大)</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4">可行性深度分析</h3>
+            <div class="space-y-4">
+                <div class="card">
+                    <h4 class="font-semibold text-lg mb-2 cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        <span>市场竞争 <span class="badge badge-red">极高</span></span>
+                        <span class="text-sm text-gray-500">&#9660;</span>
+                    </h4>
+                    <div class="details-content">
+                        <p>北美电脑硬件市场竞争异常激烈。Amazon, Newegg 已是巨头，加拿大本土还有 Canada Computers, Memory Express 等连锁店，它们拥有强大的供应链、品牌认知度和客户基础。同时，Temu, Shein 等平台以低价策略快速渗透，虽然主营品类不同，但其运营模式对整体电商环境带来价格压力。您作为新进入者，在品牌、价格、服务上都面临巨大挑战。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="font-semibold text-lg mb-2 cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        <span>资金与成本控制 <span class="badge badge-red">高风险</span></span>
+                        <span class="text-sm text-gray-500">&#9660;</span>
+                    </h4>
+                    <div class="details-content">
+                        <p>100万人民币（约18-19万加元）作为启动资金，在硬件电商领域非常紧张。硬件产品单位价值高，库存占用资金大。还需要覆盖网站建设、市场推广、运营、物流、潜在退换货及售后服务成本。利润空间在激烈竞争下会被严重压缩，资金链断裂风险高。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="font-semibold text-lg mb-2 cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        <span>供应链与议价能力 <span class="badge badge-yellow">中高风险</span></span>
+                        <span class="text-sm text-gray-500">&#9660;</span>
+                    </h4>
+                    <div class="details-content">
+                        <p>目前仅有"精粤"作为供应商，且"价格也非常一般"，这意味着您在采购成本上没有优势。稳定的、多渠道的、有价格竞争力的供应链是硬件电商的生命线。单一且价格不优的渠道难以支撑业务发展，也无法应对市场波动和断货风险。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="font-semibold text-lg mb-2 cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        <span>经验与技术储备 <span class="badge badge-red">高风险</span></span>
+                        <span class="text-sm text-gray-500">&#9660;</span>
+                    </h4>
+                    <div class="details-content">
+                        <p>您提到"没有弄网站的经验"，电商运营、数字营销、客户服务、库存管理、跨境物流等都需要专业知识。DIY电脑组装本身也需要一定的技术支持能力。初期团队人力有限，学习曲线陡峭，试错成本高。</p>
+                    </div>
+                </div>
+                 <div class="card">
+                    <h4 class="font-semibold text-lg mb-2 cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        <span>售后服务与物流 <span class="badge badge-yellow">中高风险</span></span>
+                        <span class="text-sm text-gray-500">&#9660;</span>
+                    </h4>
+                    <div class="details-content">
+                        <p>电脑硬件，尤其是DIY组件，对售后服务要求较高。退换货政策、保修处理、技术支持等环节复杂且成本不低。跨境物流的稳定性、时效性和成本也是一大考验。本地化服务能力是获取客户信任的关键。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 p-6 bg-amber-50 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-3 text-amber-700">成功率与价值评估</h3>
+                <p class="text-gray-700 mb-2">综合以上分析，在当前条件下，此电商项目的<strong class="accent-text">成功率较低</strong>。面临的挑战是多方面的，且每一个都可能对项目造成致命打击。</p>
+                <p class="text-gray-700"><strong>价值创造方面：</strong>即便能够勉强运营，初期规模小、利润薄，短期内难以创造显著的经济价值。考虑到投入的时间和精力，以及巨大的市场不确定性，其价值创造潜力有限。您提到"IT产业我感觉创造的价值不太多"，对于传统的硬件销售小规模电商而言，确实如此，尤其是在成熟市场中从零开始。</p>
+            </div>
+        </section>
+
+        <section id="new-ventures" class="content-section">
+            <div class="bg-teal-50 p-6 rounded-lg shadow mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-teal-700">新赛道探索：寻找高价值创业方向</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    鉴于您对电商硬件项目的疑虑以及对创造更大价值的渴望，本部分将结合您的兴趣、可接受的创业模式及个人情况，探讨一些更具潜力的新兴创业方向。我们将评估它们的可行性、潜在回报以及与您条件的契合度，希望能启发您的新思路。
+                </p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-3">您的兴趣与偏好：</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="badge bg-sky-100 text-sky-700">内容创作</span>
+                    <span class="badge bg-sky-100 text-sky-700">AI游戏/AI网络产品</span>
+                    <span class="badge bg-sky-100 text-sky-700">物流 (但认为IT价值不高)</span>
+                    <span class="badge bg-sky-100 text-sky-700">移民平台</span>
+                    <span class="badge bg-sky-100 text-sky-700">给客户做资产转移</span>
+                    <span class="badge bg-green-100 text-green-700">接受非实物产品</span>
+                    <span class="badge bg-green-100 text-green-700">目标：高收入</span>
+                    <span class="badge bg-yellow-100 text-yellow-700">时间：有限，需兼顾家庭</span>
+                    <span class="badge bg-green-100 text-green-700">愿意从0学习新领域</span>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-3">潜力方向评估：</h3>
+                <div class="flex space-x-2 mb-4 overflow-x-auto pb-2">
+                    <button class="filter-btn tab-button active px-4 py-2 rounded-md text-sm" data-filter="all">全部</button>
+                    <button class="filter-btn tab-button px-4 py-2 rounded-md text-sm" data-filter="low-cost">低启动成本</button>
+                    <button class="filter-btn tab-button px-4 py-2 rounded-md text-sm" data-filter="high-income">高收入潜力</button>
+                    <button class="filter-btn tab-button px-4 py-2 rounded-md text-sm" data-filter="flexible-time">时间灵活</button>
+                </div>
+            </div>
+
+            <div id="ventureIdeasContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+            
+            <div class="mt-8 card">
+                 <h3 class="text-xl font-semibold mb-3">各方向潜力对比</h3>
+                 <p class="text-sm text-gray-600 mb-4">以下图表基于普遍认知和您的个人情况，对不同创业方向的几个关键维度进行初步评估，分数越高代表在该维度上表现越优或要求越高（如技能要求）。</p>
+                <div class="chart-container h-[400px] md:h-[450px]">
+                    <canvas id="ventureComparisonChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="recommendation" class="content-section">
+            <div class="bg-indigo-50 p-6 rounded-lg shadow mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-indigo-700">综合建议与未来展望</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    在对您的电商想法进行评估并探讨了其他可能性之后，本部分将提供一个综合性的建议。我们的目标是帮助您识别那些既能发挥您的潜力，又符合您对高价值创造和现实生活需求的创业路径。
+                </p>
+            </div>
+
+            <div class="card mb-6">
+                <h3 class="text-xl font-semibold mb-3">关于电商项目的最终思考</h3>
+                <p class="text-gray-700 mb-2">您提到"说服我，改变我的想法"，这非常好，说明您对现实有清醒的认知。如前所述，在温哥华从零开始做DIY电脑及配件电商，面临的挑战是系统性的：</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-700 mb-3">
+                    <li><strong>红海市场：</strong>竞争对手过于强大，利润空间狭小。</li>
+                    <li><strong>资金壁垒：</strong>您的启动资金难以支撑硬件业务的库存和运营。</li>
+                    <li><strong>供应链劣势：</strong>缺乏有竞争力的货源。</li>
+                    <li><strong>经验门槛：</strong>电商运营和硬件售后服务复杂。</li>
+                </ul>
+                <p class="text-gray-700">简单来说，这条路成功率低，过程艰辛，且短期内难以实现您"高收入"的目标。投入产出比可能远低于您的预期。</p>
+            </div>
+
+            <div class="card mb-6">
+                <h3 class="text-xl font-semibold mb-3">更值得考虑的价值创造方向</h3>
+                <p class="text-gray-700 mb-2">结合您的兴趣点（内容创作、AI、移民服务等）、对非实物产品的接受度、高收入的期望以及学习意愿，以下方向更具潜力：</p>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-lg text-indigo-600">1. 垂直领域内容创作 + 知识付费/社群</h4>
+                        <p class="text-gray-600"><strong>理由：</strong>启动成本极低，时间相对灵活，非常适合兼顾家庭。一旦建立起影响力和信任度，变现途径多样（广告、赞助、付费内容、咨询、社群）。</p>
+                        <p class="text-gray-600 mt-1"><strong>切入点建议：</strong>
+                            <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                                <li><strong>北美华人生活/移民经验分享：</strong> 结合您在温哥华的背景，分享实用信息，如子女教育、生活成本、求职、文化适应等。</li>
+                                <li><strong>AI工具测评与应用教程：</strong> AI是热点，您可以学习并分享如何使用AI工具提高生活和工作效率，面向对AI感兴趣但缺乏技术背景的华人用户。</li>
+                                <li><strong>特定兴趣社群运营：</strong> 例如，围绕某个小众爱好或专业技能，建立社群并提供价值。</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-indigo-600">2. AI赋能的在线服务或小型网络产品</h4>
+                        <p class="text-gray-600"><strong>理由：</strong>AI领域发展迅速，存在大量利用现有AI技术解决特定小众市场问题的机会。产品可以是软件、工具或自动化服务，可扩展性强，边际成本低。</p>
+                        <p class="text-gray-600 mt-1"><strong>切入点建议：</strong>
+                            <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                                <li><strong>AI辅助内容创作工具：</strong> 例如，针对特定平台（小红书、微信公众号）的AI写作助手、图片生成优化工具。</li>
+                                <li><strong>小型AI效率工具：</strong> 解决某个具体工作流程中的痛点，如简历优化、邮件模板生成等。</li>
+                                <li><strong>利基市场AI咨询/集成服务：</strong> 帮助小型企业或个人理解并应用AI技术。</li>
+                            </ul>
+                        </p>
+                    </div>
+                     <div>
+                        <h4 class="font-semibold text-lg text-indigo-600">3. (谨慎考虑) 移民相关的资讯平台或细分服务</h4>
+                        <p class="text-gray-600"><strong>理由：</strong>移民是持续性需求，尤其在温哥华这样的城市。如果能提供真实、有价值的信息或服务，市场潜力大。</p>
+                        <p class="text-gray-600 mt-1"><strong>切入点建议与注意事项：</strong>
+                            <ul class="list-disc list-inside text-sm text-gray-500 ml-4">
+                                <li><strong>信息整合与解读：</strong> 专注于某个特定移民路径或人群的信息服务，避免直接提供法律咨询（除非有资质）。</li>
+                                <li><strong>生活安家配套服务链接：</strong> 例如，与地产、教育、金融等领域专业人士合作，提供转介绍服务。</li>
+                                <li><strong>高度注意合规性：</strong> 移民领域法规严格，务必确保所有业务在法律框架内进行。资产转移服务更是高敏感、高门槛，初期不建议个人轻易涉足。</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mt-4">这些方向的共同点是：更侧重于知识、技能和服务，而非重资产的实物商品。它们更能发挥个人创造力，且更容易实现低成本启动和高价值回报的平衡，也更适合您目前的时间安排和学习意愿。</p>
+            </div>
+
+            <div class="card">
+                <h3 class="text-xl font-semibold mb-3">下一步行动建议</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>深度调研：</strong>选择1-2个最感兴趣的方向，进行深入的市场调研，了解目标用户、竞争对手和成功案例。</li>
+                    <li><strong>聚焦学习：</strong>针对所选方向，系统学习必要的知识和技能。利用在线课程、行业报告、专业社群等资源。</li>
+                    <li><strong>小步快跑，快速验证：</strong>不要追求一步到位。从最小可行产品（MVP）开始，例如一篇高质量博客、一个简单的AI工具原型、一个小范围的社群。快速获取市场反馈并迭代。</li>
+                    <li><strong>建立个人品牌与网络：</strong>在内容创作或服务型创业中，个人品牌至关重要。积极参与线上线下交流，拓展人脉。</li>
+                    <li><strong>保持耐心与毅力：</strong>任何有价值的创造都需要时间和积累。设定实际的目标，并为之持续努力。</li>
+                    <li><strong>寻求导师或伙伴：</strong>如果可能，找到在相关领域有经验的人士提供指导，或者寻找志同道合的伙伴共同创业。</li>
+                </ul>
+                <p class="text-gray-700 mt-3">祝您在温哥华的创业之路顺利，找到真正能创造巨大价值并实现个人理想的方向！</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-12 py-8 text-center">
+        <p class="text-sm">&copy; <span id="currentYear"></span> 创业方向评估. 仅供参考.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const contentSections = document.querySelectorAll('.content-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function switchTab(targetId) {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                    }
+                });
+                navButtons.forEach(button => {
+                    button.classList.remove('active');
+                    if (button.dataset.target === targetId) {
+                        button.classList.add('active');
+                    }
+                });
+            }
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.dataset.target;
+                    switchTab(targetId);
+                    if(mobileMenu.classList.contains('hidden') === false) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Risk Radar Chart
+            const riskCtx = document.getElementById('riskRadarChart').getContext('2d');
+            new Chart(riskCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['市场竞争', '资金与成本', '供应链', '经验技术', '售后物流', '市场认知'],
+                    datasets: [{
+                        label: '风险指数 (越高风险越大)',
+                        data: [9, 8, 7, 8, 7, 6], // Subjective scores 0-10
+                        fill: true,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        pointBackgroundColor: 'rgb(255, 99, 132)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(255, 99, 132)'
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { display: true },
+                            suggestedMin: 0,
+                            suggestedMax: 10,
+                            ticks: { stepSize: 2, backdropColor: 'transparent' },
+                            pointLabels: { font: { size: 10 } } 
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top', labels: { font: {size: 11} } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed.r !== null) { label += context.parsed.r; }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Venture Ideas Data
+            const ventureIdeas = [
+                { 
+                    id: 'content-creation', 
+                    name: '垂直领域内容创作', 
+                    description: '通过文字、视频、音频等形式，在特定领域输出有价值内容，建立个人品牌和社群。',
+                    pros: ['启动成本低', '时间灵活', '可远程', '复利效应强'],
+                    cons: ['初期收入不稳定', '需持续输出', '竞争可能激烈'],
+                    focus: '北美华人生活、AI科普、小众兴趣',
+                    tags: ['low-cost', 'high-income', 'flexible-time'],
+                    metrics: { cost: 1, income: 4, timeFlex: 5, skill: 3, scale: 4 }
+                },
+                { 
+                    id: 'ai-products', 
+                    name: 'AI赋能网络产品/服务', 
+                    description: '开发或利用AI技术提供小型在线工具、自动化服务或咨询。',
+                    pros: ['高成长潜力', '可扩展性强', '边际成本低'],
+                    cons: ['技术门槛 (可学习/合作)', '市场变化快', '需找到好切入点'],
+                    focus: 'AI效率工具、AI辅助创作、特定行业AI解决方案',
+                    tags: ['high-income'],
+                    metrics: { cost: 3, income: 5, timeFlex: 3, skill: 4, scale: 5 }
+                },
+                { 
+                    id: 'immigration-platform', 
+                    name: '移民资讯平台/细分服务', 
+                    description: '提供移民相关的资讯整合、经验分享或特定环节的辅助服务。',
+                    pros: ['市场需求稳定', '有价值感', '可与本地资源结合'],
+                    cons: ['政策敏感性高', '需专业知识或合作', '建立信任周期长', '合规要求高'],
+                    focus: '特定移民群体信息、安家生活指南 (避免法律咨询)',
+                    tags: ['high-income'],
+                    metrics: { cost: 2, income: 4, timeFlex: 3, skill: 4, scale: 3 }
+                },
+                 { 
+                    id: 'logistics-niche', 
+                    name: '物流领域 (需谨慎评估)', 
+                    description: '您提到对物流有兴趣，但传统物流重资产、运营复杂。可考虑轻资产的细分领域。',
+                    pros: ['刚需行业', '市场空间大'],
+                    cons: ['资本密集 (传统模式)', '运营管理复杂', '竞争激烈'],
+                    focus: '跨境电商小包物流咨询、特定品类物流方案优化 (轻资产方向)',
+                    tags: [],
+                    metrics: { cost: 4, income: 3, timeFlex: 2, skill: 3, scale: 3 }
+                },
+                 { 
+                    id: 'asset-transfer', 
+                    name: '客户资产转移服务 (极高门槛)', 
+                    description: '为高净值客户提供跨境资产配置和转移的专业咨询与服务。',
+                    pros: ['单客价值极高', '高收入潜力'],
+                    cons: ['法律金融专业度极高', '牌照与合规要求严苛', '信任建立极难', '风险巨大'],
+                    focus: '通常需大型机构或资深专业团队背景，不适合个人初期创业',
+                    tags: ['high-income'],
+                    metrics: { cost: 5, income: 5, timeFlex: 1, skill: 5, scale: 2 }
+                }
+            ];
+
+            const ventureIdeasContainer = document.getElementById('ventureIdeasContainer');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            function displayVentureIdeas(filter = 'all') {
+                ventureIdeasContainer.innerHTML = '';
+                const filteredIdeas = filter === 'all' ? ventureIdeas : ventureIdeas.filter(idea => idea.tags.includes(filter));
+                
+                filteredIdeas.forEach(idea => {
+                    const card = `
+                        <div class="card venture-idea-card">
+                            <h4 class="font-semibold text-lg mb-2 text-teal-600">${idea.name}</h4>
+                            <p class="text-sm text-gray-600 mb-2">${idea.description}</p>
+                            <p class="text-sm font-medium text-gray-700">核心优势: <span class="font-normal">${idea.pros.join(', ')}</span></p>
+                            <p class="text-sm font-medium text-gray-700">潜在挑战: <span class="font-normal">${idea.cons.join(', ')}</span></p>
+                            <p class="text-sm font-medium text-gray-700">建议切入点: <span class="font-normal">${idea.focus}</span></p>
+                            <div class="mt-2 flex flex-wrap gap-1">
+                                ${idea.tags.map(tag => `<span class="badge bg-gray-200 text-gray-700 text-xs">${tag.replace('-',' ')}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                    ventureIdeasContainer.insertAdjacentHTML('beforeend', card);
+                });
+            }
+            
+            filterBtns.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    displayVentureIdeas(button.dataset.filter);
+                });
+            });
+
+            displayVentureIdeas(); // Initial display
+
+            // Venture Comparison Chart
+            const ventureCompCtx = document.getElementById('ventureComparisonChart').getContext('2d');
+            const chartLabels = ventureIdeas.map(idea => idea.name.length > 16 ? idea.name.substring(0, 15) + '...' : idea.name);
+            const chartData = {
+                labels: chartLabels,
+                datasets: [
+                    {
+                        label: '启动成本 (越低越好)',
+                        data: ventureIdeas.map(idea => 6 - idea.metrics.cost), // Invert for "lower is better"
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '收入潜力',
+                        data: ventureIdeas.map(idea => idea.metrics.income),
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '时间灵活性',
+                        data: ventureIdeas.map(idea => idea.metrics.timeFlex),
+                        backgroundColor: 'rgba(255, 206, 86, 0.6)',
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '技能要求',
+                        data: ventureIdeas.map(idea => idea.metrics.skill),
+                        backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    },
+                     {
+                        label: '可扩展性',
+                        data: ventureIdeas.map(idea => idea.metrics.scale),
+                        backgroundColor: 'rgba(255, 159, 64, 0.6)',
+                        borderColor: 'rgba(255, 159, 64, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            new Chart(ventureCompCtx, {
+                type: 'bar',
+                data: chartData,
+                options: {
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', // Horizontal bar chart for better readability of labels
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            suggestedMax: 5,
+                            ticks: { font: { size: 10 } }
+                        },
+                        y: {
+                           ticks: { font: { size: 10 }, autoSkip: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: {size: 10}, boxWidth: 15 } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) { label += ': '; }
+                                    let value = context.parsed.x;
+                                    if (context.dataset.label === '启动成本 (越低越好)') {
+                                        value = 6 - value; // Show original score
+                                    }
+                                    if (value !== null) { label += value; }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+
+        function toggleDetails(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('span:last-child');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                arrow.innerHTML = '&#9660;'; // Down arrow
+            } else {
+                content.style.display = 'block';
+                arrow.innerHTML = '&#9650;'; // Up arrow
+            }
+        }
+    </script>
+</body>
+</html>

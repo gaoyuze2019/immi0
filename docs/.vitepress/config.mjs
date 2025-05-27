@@ -6,17 +6,9 @@ export default defineConfig({
   title: 'immi0 博客',
   description: '记录技术与人生成长',
   base: '/', // Base URL for deployment
-  
-  // 自定义域名配置
-  site: 'https://www.immi0.com',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'theme-color', content: '#3c8772' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'immi0 博客' }],
-    ['meta', { property: 'og:url', content: 'https://www.immi0.com' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: '@immi0_blog' }]
+    ['meta', { name: 'theme-color', content: '#3c8772' }]
   ],
   markdown: {
     math: true
@@ -29,7 +21,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/posts/' },
-      { text: '分享', link: '/share' },
+      { text: '创业评估', link: '/startup-assessment.html' },
       { text: '关于', link: '/about' }
     ],
     sidebar: {
