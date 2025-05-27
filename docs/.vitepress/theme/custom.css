@@ -144,9 +144,45 @@
   border-right: 1px solid rgba(13, 148, 136, 0.2);
 }
 
-/* 文章内容美化 */
+/* 文章内容美化 - 优化布局宽度 */
 .VPDoc {
-  max-width: 800px;
+  max-width: 1000px;
+}
+
+/* 容器宽度优化 */
+.VPContent .container,
+.VPNavBar .container {
+  max-width: 1200px;
+}
+
+/* 主要内容区域优化 */
+.VPDoc .container {
+  max-width: none;
+  padding: 0 2rem;
+}
+
+/* 响应式布局优化 */
+@media (min-width: 1200px) {
+  .VPDoc {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .VPContent .container {
+    max-width: 1200px;
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .VPDoc {
+    max-width: 1100px;
+  }
+  
+  .VPContent .container {
+    max-width: 1400px;
+    padding: 0 4rem;
+  }
 }
 
 .VPDoc h1, .VPDoc h2, .VPDoc h3 {
@@ -214,16 +250,84 @@
   margin-top: 2rem;
 }
 
+/* 布局间距优化 */
+.VPContent {
+  padding-top: 1rem;
+}
+
+.VPDoc > div {
+  padding: 0 1rem;
+}
+
+/* 侧边栏宽度优化 */
+.VPSidebar {
+  width: 280px;
+}
+
+.VPContent.has-sidebar {
+  padding-left: 300px;
+}
+
+/* 首页布局优化 */
+.VPHome .VPHero {
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+}
+
+.VPHome .VPFeatures {
+  padding: 1rem 0;
+}
+
+/* 文章页面布局优化 */
+.VPDoc .content {
+  max-width: none;
+  padding: 0;
+}
+
+/* 导航栏紧凑化 */
+.VPNavBar {
+  height: 60px;
+  padding: 0 1rem;
+}
+
+.VPNavBarTitle {
+  padding: 0;
+}
+
 /* 响应式优化 */
+@media (max-width: 1200px) {
+  .VPContent.has-sidebar {
+    padding-left: 0;
+  }
+  
+  .VPSidebar {
+    width: 260px;
+  }
+}
+
 @media (max-width: 768px) {
   .VPHero {
-    padding: 2rem 1rem;
-    margin: 1rem 0;
+    padding: 1.5rem 1rem;
+    margin: 0.5rem 0;
   }
   
   .VPNavBarTitle .logo {
     width: 28px;
     height: 28px;
+  }
+  
+  .VPDoc {
+    max-width: none;
+    padding: 0 1rem;
+  }
+  
+  .VPContent .container {
+    padding: 0 1rem;
+  }
+  
+  .VPNavBar {
+    height: 56px;
+    padding: 0 1rem;
   }
 }
 
@@ -273,4 +377,117 @@
 .DocSearch-Button:hover {
   background: rgba(13, 148, 136, 0.15);
   border-color: rgba(13, 148, 136, 0.3);
-} 
+}
+
+/* 专业排版优化 */
+/* 行高和字间距优化 */
+.VPDoc p {
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+.VPDoc li {
+  line-height: 1.6;
+  margin: 0.3rem 0;
+}
+
+/* 标题间距优化 */
+.VPDoc h1 {
+  margin: 2rem 0 1.5rem 0;
+  font-size: 2.2rem;
+}
+
+.VPDoc h2 {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.VPDoc h3 {
+  margin: 1.5rem 0 0.8rem 0;
+  font-size: 1.4rem;
+}
+
+/* 列表样式优化 */
+.VPDoc ul, .VPDoc ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.VPDoc ul li {
+  position: relative;
+}
+
+.VPDoc ul li::marker {
+  color: var(--vp-c-brand-1);
+}
+
+/* 内容区域最大化利用 */
+.Layout {
+  max-width: 100vw;
+}
+
+.VPContent {
+  width: 100%;
+  max-width: none;
+}
+
+/* 移除不必要的边距 */
+.VPDoc .header-anchor {
+  margin-left: 0.5rem;
+}
+
+/* 优化代码块布局 */
+.VPDoc div[class*="language-"] {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+/* 表格响应式优化 */
+.VPDoc table {
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.VPDoc td, .VPDoc th {
+  padding: 0.8rem 1rem;
+}
+
+/* 引用块优化 */
+.VPDoc blockquote {
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+/* 图片优化 */
+.VPDoc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 内容宽度自适应优化 */
+@media (min-width: 1600px) {
+  .VPDoc {
+    max-width: 1200px;
+  }
+  
+  .VPContent .container {
+    max-width: 1600px;
+    padding: 0 5rem;
+  }
+}
+
+/* 超大屏幕优化 */
+@media (min-width: 1920px) {
+  .VPDoc {
+    max-width: 1300px;
+  }
+  
+  .VPContent .container {
+    max-width: 1800px;
+    padding: 0 6rem;
+  }
+}
